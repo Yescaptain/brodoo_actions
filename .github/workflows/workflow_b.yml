@@ -11,6 +11,11 @@ on:
 #        required: true
 
 jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    name: call wf
+    steps:
+      - uses: actions/checkout@v3
   example_job:
     name: Pass input and secrets to my-action
     runs-on: ubuntu-latest
