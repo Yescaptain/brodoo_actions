@@ -11,7 +11,15 @@ jobs:
 #    uses: octo-org/example-repo/.github/workflows/workflow-A.yml@v1
 
   call-workflow-passing-data:
-    uses: ./action.yml@main
-    with:
-      username: 'breeze'
-      who-to-greet: 'breezy the Octocat'
+    runs-on: ubuntu-latest
+    name: call wf
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: call act
+        uses: ./action.yml@main
+        with:
+          username: 'breeze'
+          who-to-greet: 'breezy the Octocat'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.username }}"
