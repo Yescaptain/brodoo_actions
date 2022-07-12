@@ -13,19 +13,20 @@ jobs:
   checkout:
     runs-on: ubuntu-latest
     name: call wf
-    uses: actions/checkout@v3
+    steps:
+      - uses: actions/checkout@v3
   call-workflow-passing-data:
     runs-on: ubuntu-latest
     name: call wf
-    uses: ./action.yml
-      with:
-        username: 'breeze'
-        who-to-greet: 'breezy the Octocat'
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v3
-#      - name: Get the output time
-#        run: |
-#          echo "The time was ${{ jobs }}"
-#          echo "The time was ${{ steps }}"
+#    uses: ./action.yml
+#      with:
+#        username: 'breeze'
+#        who-to-greet: 'breezy the Octocat'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Get the output time
+        run: |
+          echo "The time was ${{ jobs }}"
+          echo "The time was ${{ steps }}"
           
