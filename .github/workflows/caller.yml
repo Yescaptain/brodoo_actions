@@ -12,5 +12,7 @@ jobs:
 #    with:
 #      who-to-greet: 'bropaas'
 #      username: 'brodoo'
+  call-workflow-b-in-local-repo:
+    uses: Yescaptain/brodoo_actions/.github/workflows/workflow_b.yml@main
 #  call-workflow-in-another-repo:
 #    uses: octo-org/another-repo/.github/workflows/workflow.yml@v1
