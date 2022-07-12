@@ -19,24 +19,29 @@ on:
 jobs:
 
   # This workflow contains a single job called "build"
+  example_job:
+    name: Pass input and secrets to my-action
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo job in main
+        run: echo Hello, main.yml file!
+
   build:
+    name: Pass username and who-to-greet to my-action
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-
       # Runs a set of commands using the runners shell
       - uses: Yescaptain/brodoo_actions/action.yml@main
       - name: Run a multi-line script
         id: same_step
-      - with:
+        with:
           username: "jurre"
           who-to-greet: "main man"
         run: |
