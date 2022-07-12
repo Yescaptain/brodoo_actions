@@ -8,8 +8,10 @@ jobs:
     uses: ./.github/workflows/workflow.yml
   call-workflow-2-in-local-repo:
     uses: ./.github/workflows/main.yml
-    name: elec the guv
   call-workflow-b-in-local-repo:
     uses: Yescaptain/brodoo_actions/.github/workflows/workflow_b.yml@main
+    name: elec the guv
+    with:
+      username: 'brodoo'
 #  call-workflow-in-another-repo:
 #    uses: octo-org/another-repo/.github/workflows/workflow.yml@v1
