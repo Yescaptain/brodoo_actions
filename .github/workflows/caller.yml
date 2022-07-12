@@ -8,8 +8,8 @@ jobs:
   call-workflow-2-in-local-repo:
     uses: ./.github/workflows/workflow_b.yml
     name: elec the guv
-    with:
-      who-to-greet: 'bropaas'
-      username: 'brodoo'
+#    with:
+#      who-to-greet: 'bropaas'
+#      username: 'brodoo'
   call-workflow-in-another-repo:
     uses: octo-org/another-repo/.github/workflows/workflow.yml@v1
