@@ -13,7 +13,7 @@ jobs:
   checkout:
     runs-on: ubuntu-latest
     name: call wf
-    uses: ./action.yml
+    uses: actions/checkout@v3
   call-workflow-passing-data:
     runs-on: ubuntu-latest
     name: call wf
