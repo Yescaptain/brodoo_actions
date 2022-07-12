@@ -15,8 +15,8 @@ jobs:
     name: Pass input and secrets to my-action
     runs-on: ubuntu-latest
     steps:
-      - uses: Yescaptain/brodoo_actions/action.yml@main
-#      - uses: ./.github/workflows/action.yml
+#      - uses: Yescaptain/brodoo_actions/action.yml@main
+      - uses: ./.github/workflows/action.yml
         id: oi_guv
         with:
           username: ${{ inputs.username }}
