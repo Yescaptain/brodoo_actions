@@ -13,7 +13,7 @@ jobs:
   call-workflow-passing-data:
     runs-on: ubuntu-latest
     name: call wf
-    uses: ./
+    uses: ./action.yml
       with:
         username: 'breeze'
         who-to-greet: 'breezy the Octocat'
