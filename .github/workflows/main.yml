@@ -40,7 +40,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - uses: Yescaptain/brodoo_actions/action.yml@main
       - name: Run a multi-line script
-        id: same_step
+        id: first_step
+      - name: run a secon step using the first bit
         with:
           username: "jurre"
           who-to-greet: "main man"
