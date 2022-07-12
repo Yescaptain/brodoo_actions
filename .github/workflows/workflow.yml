@@ -12,6 +12,6 @@ jobs:
   call-workflow-passing-data:
     uses: Yescaptain/brodoo_actions/.github/workflows/workflow_b.yml@main
     with:
-      username: mona
+      username: 'breeze'
     secrets:
       token: ${{ secrets.TOKEN }}

@@ -1,5 +1,5 @@
-name: 'do something in a dcker'
-description: 'Greet someone and record the time'
+name: 'do something in a docker'
+description: 'Greet someone, record the time and say oi to the guv'
 author: Yescaptain
 branding:
   icon: 'anchor'
@@ -9,9 +9,15 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  username:  # id of input
+    description: 'username input'
+    required: true
+    default: 'World'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
+  username: # id of output
+    description: 'The user we got'
 runs:
   using: 'docker'
   image: 'Dockerfile'
