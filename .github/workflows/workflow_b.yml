@@ -20,7 +20,7 @@ jobs:
         id: oi_guv
         with:
           username: ${{ inputs.username }}
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'breezy the Octocat'
 #          token: ${{ secrets.token }}
       - name: Get the output time
         run: echo "The user was ${{ steps.oi_guv.outputs.username }}"

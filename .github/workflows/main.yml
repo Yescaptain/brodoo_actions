@@ -15,10 +15,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-
-  # This workflow contains a single job called "build"
   example_job:
     name: Pass input and secrets to my-action
     runs-on: ubuntu-latest
@@ -27,18 +24,14 @@ jobs:
         run: echo Hello, main.yml file!
 
   build:
-    name: Pass username and who-to-greet to my-action
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: Yescaptain/brodoo_actions/action.yml@main
-        id: first_step
-        with:
-          username: "jurre"
-          who-to-greet: "main man"
-      - name: outs
-        run: |
-          echo "The user was ${{ steps.same_step.outputs.username }}"
-          echo test, and deploy your project.
+      - uses: actions/checkout@v3
+      - name: TODO to Issue
+        uses: alstr/todo-to-issue-action@v4.6.7
 
 
