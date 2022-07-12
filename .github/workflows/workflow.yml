@@ -11,7 +11,7 @@ jobs:
 #    uses: octo-org/example-repo/.github/workflows/workflow-A.yml@v1
 
   call-workflow-passing-data:
-    uses: ./
+    uses: ./action.yml@main
     with:
       username: 'breeze'
       who-to-greet: 'breezy the Octocat'
