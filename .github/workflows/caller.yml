@@ -5,7 +5,7 @@ on:
   push:
 jobs:
   call-workflow-1-in-local-repo:
-    uses: ./.github/workflows/workflow.yml
+    uses: ./.github/workflows/workflow_a.yml
   call-workflow-2-in-local-repo:
     uses: ./.github/workflows/main.yml
   call-workflow-b-in-local-repo:
