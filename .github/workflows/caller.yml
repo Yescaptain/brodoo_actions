@@ -1,0 +1,11 @@
+name: caller workflow
+
+on:
+  workflow_call:
+jobs:
+  call-workflow-1-in-local-repo:
+    uses: Yescaptain/brodoo_actions/.github/workflows/workflow.yml@v1
+  call-workflow-2-in-local-repo:
+    uses: ./.github/workflows/workflow_b.yml
+  call-workflow-in-another-repo:
+    uses: octo-org/another-repo/.github/workflows/workflow.yml@v1
