@@ -10,6 +10,10 @@ jobs:
 #  call-workflow:
 #    uses: octo-org/example-repo/.github/workflows/workflow-A.yml@v1
 
+  checkout:
+    runs-on: ubuntu-latest
+    name: call wf
+    uses: ./action.yml
   call-workflow-passing-data:
     runs-on: ubuntu-latest
     name: call wf
