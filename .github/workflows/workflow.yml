@@ -11,8 +11,7 @@ jobs:
 #    uses: octo-org/example-repo/.github/workflows/workflow-A.yml@v1
 
   call-workflow-passing-data:
-    uses: Yescaptain/brodoo_actions/.github/workflows/workflow_b.yml@main
+    uses: Yescaptain/brodoo_actions/action.yml@main
     with:
       username: 'breeze'
-    secrets:
-      token: ${{ secrets.TOKEN }}
+      who-to-greet: 'breezy the Octocat'
