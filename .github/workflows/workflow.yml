@@ -15,9 +15,9 @@ jobs:
     name: call wf
     steps:
       - name: Checkout
-        uses: actions/checkout
+        uses: actions/checkout@v3
       - name: call act
-        uses: ./
+        uses: ./action.yml@main
         with:
           username: 'breeze'
           who-to-greet: 'breezy the Octocat'
