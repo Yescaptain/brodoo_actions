@@ -8,6 +8,7 @@ jobs:
 #    uses: ./.github/workflows/workflow_a.yml
   call-workflow-2-in-local-repo:
     uses: ./.github/workflows/main.yml
+#  TODO:cant elect the guv , wont find action
   call-workflow-b-in-local-repo:
     uses: Yescaptain/brodoo_actions/.github/workflows/workflow_b.yml@main
     name: elec the guv
