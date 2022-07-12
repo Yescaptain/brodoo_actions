@@ -9,8 +9,6 @@ jobs:
   call-workflow-2-in-local-repo:
     uses: ./.github/workflows/main.yml
     name: elec the guv
-    with:
-      username: 'brodoo'
   call-workflow-b-in-local-repo:
     uses: Yescaptain/brodoo_actions/.github/workflows/workflow_b.yml@main
 #  call-workflow-in-another-repo:
