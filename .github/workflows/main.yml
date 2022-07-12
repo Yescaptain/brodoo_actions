@@ -4,6 +4,8 @@ name: CI
 
 # Controls when the workflow will run
 on:
+#  for the call from caller.yml
+  workflow_call:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
@@ -33,8 +35,12 @@ jobs:
       # Runs a set of commands using the runners shell
       - uses: Yescaptain/brodoo_actions/action.yml@main
       - name: Run a multi-line script
+       id: same_step
+      - with:
+          username: "jurre"
+          who-to-greet: "main man"
         run: |
-          echo Add other actions to build,
+          echo "The user was ${{ steps.same_step.outputs.username }}"
           echo test, and deploy your project.
 
 
