@@ -10,7 +10,6 @@ jobs:
     uses: ./.github/workflows/main.yml
     name: elec the guv
     with:
-      who-to-greet: 'bropaas'
       username: 'brodoo'
   call-workflow-b-in-local-repo:
     uses: Yescaptain/brodoo_actions/.github/workflows/workflow_b.yml@main
