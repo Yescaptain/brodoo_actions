@@ -17,11 +17,11 @@ jobs:
       with:
         username: 'breeze'
         who-to-greet: 'breezy the Octocat'
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Get the output time
-        run: | 
-          echo "The time was ${{ jobs }}"
-          echo "The time was ${{ steps }}"
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#      - name: Get the output time
+#        run: |
+#          echo "The time was ${{ jobs }}"
+#          echo "The time was ${{ steps }}"
           
